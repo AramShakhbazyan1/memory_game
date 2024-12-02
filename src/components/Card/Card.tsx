@@ -3,6 +3,7 @@ import "./styles.css";
 
 interface CardProps {
     card: {
+        matched: any;
         image: string;
     };
     onClick: () => void;
@@ -10,6 +11,9 @@ interface CardProps {
 }
 
 const Card: React.FC<CardProps> = ({ card, onClick, isFlipped }) => {
+    if (card.matched) {
+        return <div className="card matched"></div>; // Render an empty card for matched pairs
+      }
     return (
         <div
             className={`card ${isFlipped ? "flipped" : ""}`}

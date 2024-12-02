@@ -20,6 +20,9 @@
     transform-style: preserve-3d;
     transition: transform 0.5s;
 }
+.card.matched {
+    visibility: hidden; /* Hides the card while preserving its grid space */
+  }
 
 .card-front,
 .card-back {

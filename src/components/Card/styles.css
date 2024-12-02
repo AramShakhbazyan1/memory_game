@@ -21,7 +21,7 @@
     transition: transform 0.5s;
 }
 .card.matched {
-    visibility: hidden; /* Hides the card while preserving its grid space */
+    visibility: hidden;
   }
 
 .card-front,

@@ -1,50 +1,52 @@
-# React + TypeScript + Vite
+# Memory Matching Game
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A fun and interactive **Memory Matching Game** built with **React** and **Vite**. Players flip cards to find matching pairs within a time limit. The game features three difficulty levels, each with unique grid sizes and time constraints, ensuring an engaging and challenging experience.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🎮 Features
 
-## Expanding the ESLint configuration
+- **Three Difficulty Levels**:
+  - **Easy**: 6 pairs, 1-minute time limit.
+  - **Medium**: 10 pairs, 2-minute time limit.
+  - **Hard**: 15 pairs, 3-minute time limit.
+- **Timer Starts Dynamically**: The timer begins when the first card is flipped.
+- **Matching Logic**:
+  - Cards stay hidden until flipped.
+  - Matched cards remain revealed.
+  - Non-matching cards flip back automatically unless another card is clicked.
+- **Game States**:
+  - **Win**: Match all pairs before the timer runs out.
+  - **Lose**: Timer runs out before all pairs are matched.
+- **Restart Anytime**: A restart button resets the game state:
+  - Shuffles cards.
+  - Resets matched pairs, flipped cards, and the timer.
+- **User Feedback**:
+  - Congratulatory message on success.
+  - Failure message on timer expiration.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+---
 
-- Configure the top-level `parserOptions` property like this:
+## 🛠️ Getting Started
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+Follow these instructions to set up and run the project locally.
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+### Prerequisites
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+Ensure the following tools are installed on your system:
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+- **Node.js** (v16 or later)
+- **npm** or **yarn** package manager
+
+---
+
+### 📥 Installation
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/yourusername/memory_game.git
+   cd memory_game
+   npm install
+
+2. **Run**:
+  npm run dev

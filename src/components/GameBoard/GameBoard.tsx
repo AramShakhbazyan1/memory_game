@@ -110,6 +110,8 @@ const GameBoard: React.FC<GameBoardProps> = ({ level, gameState, dispatch }) => 
         <div className={`game-board grid-${level}`}>
             {cards.map((card) => (
                 <Card
+                // Using an index for key is not a good idea, but my Cards will not be added or removed here
+                // otherwise I would use a UUID
                     key={card.id}
                     card={card}
                     onClick={() => handleCardClick(card)}

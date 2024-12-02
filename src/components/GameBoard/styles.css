@@ -1,0 +1,22 @@
+.game-board {
+    display: grid;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin: 0 auto;
+    width: fit-content;
+}
+
+
+.game-board.grid-easy {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.game-board.grid-medium {
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.game-board.grid-hard {
+    grid-template-columns: repeat(6, 1fr);
+}
